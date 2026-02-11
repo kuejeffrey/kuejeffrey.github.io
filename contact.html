@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">Jeffrey Kue</div>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a class="active" href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <section class="card">
+      <h1>Contact</h1>
+      <p>Put your professional links here.</p>
+
+      <p>
+        <span class="badge">Email: </span> <a href="mailto:youremail@example.com"> jeffreyfkue@gmail.com</a><br />
+        <span class="badge">LinkedIn:</span> <a href="https://linkedin.com" target="_blank" rel="noreferrer">https://www.linkedin.com/in/jeffreyfranklinkue</a><br />
+        <span class="badge">GitHub:</span> <a href="https://github.com" target="_blank" rel="noreferrer">https://github.com/kuejeffrey</a>
+      </p>
+
+      <h2>Message (optional)</h2>
+      <p>This form won’t submit anywhere yet, but it looks professional. Later we can connect it.</p>
+
+      <form>
+        <label>Name</label>
+        <textarea rows="1", placeholder="Your Name"></textarea>        
+        <label>Message</label>
+        <textarea rows="5", placeholder="Write your message..."></textarea>
+        <a class="btn" href="mailto:jeffreyfkue@gmail.com">Email Me</a>
+      </form>
+    </section>
+
+    <div class="footer">© <span id="year"></span> Jeffrey Kue</div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

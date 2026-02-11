@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jeffrey Kue | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">Jeffrey Kue</div>
+      <div class="navlinks">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <section class="card">
+      <span class="badge">Personal Website</span>
+      <h1>Hi, I’m Jeffrey Kue 👋</h1>
+      <p>
+        I’m a student and aspiring tech professional focused on building practical projects and growing my skills.
+        This site highlights my background, work, and ways to connect.
+      </p>
+      <a class="btn" href="projects.html">View Projects</a>
+    </section>
+
+    <section class="card">
+      <h2>What I’m working on</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Project Area</h3>
+          <p>Example: security labs, systems analysis, or a personal app.</p>
+        </div>
+        <div class="card">
+          <h3>Leadership</h3>
+          <p>Example: student organization work, events, coordination.</p>
+        </div>
+        <div class="card">
+          <h3>Learning</h3>
+          <p>Example: Python, cloud computing, networking, etc.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">© <span id="year"></span> Jeffrey Kue</div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
