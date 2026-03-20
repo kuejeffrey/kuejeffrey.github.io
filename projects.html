@@ -5,22 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jeffrey Kue — Projects</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="theme.js"></script>
 </head>
 <body>
   <div class="wrap">
 
-    <!-- NAV -->
     <nav class="nav">
-      <div class="brand">jeffrey.kue</div>
-      <div class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a class="active" href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+      <div class="nav-left">
+        <div class="brand">jeffrey.kue</div>
+        <div class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a class="active" href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icons"><span>☀️</span><span>🌙</span></span>
+        <span class="toggle-thumb">🌙</span>
+      </button>
     </nav>
 
-    <!-- HEADER -->
     <section class="card hero-card fade-in" style="min-height:180px;">
       <div class="hero-grid-bg"></div>
       <div class="hero-glow"></div>
@@ -29,7 +34,6 @@
       <p>A snapshot of my technical and product work — what I built, why it matters, and what I learned.</p>
     </section>
 
-    <!-- PROJECT CARDS -->
     <section class="card fade-in">
       <div class="section-label">// featured work</div>
       <div class="grid" style="margin-top:8px;">
@@ -37,11 +41,7 @@
         <div class="project-card">
           <div class="project-num">01 · Systems Design</div>
           <div class="project-title">Pharmacy Class-Selection System</div>
-          <p class="project-desc">
-            Led as Product Owner in MIS 3223 to design a system allowing College of Pharmacy
-            students to select classes based on career interest. Managed stakeholder interviews,
-            wrote user stories, and facilitated sprint reviews.
-          </p>
+          <p class="project-desc">Led as Product Owner in MIS 3223 to design a system allowing College of Pharmacy students to select classes based on career interest. Managed stakeholder interviews, wrote user stories, and facilitated sprint reviews.</p>
           <div class="project-tags">
             <span class="tag">Product Owner</span>
             <span class="tag">Systems Analysis</span>
@@ -49,83 +49,57 @@
             <span class="tag">UML</span>
           </div>
           <div class="project-links">
-            <a class="project-link" href="#" target="_blank" rel="noreferrer">
-              ↗ Case Study <span style="font-size:10px; opacity:.5;">(add link)</span>
-            </a>
+            <a class="project-link" href="#">↗ Case Study <span style="font-size:10px;opacity:.5;">(add link)</span></a>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-num">02 · Python</div>
           <div class="project-title">Project Two</div>
-          <p class="project-desc">
-            Describe your Python project here — what problem it solves, how it works, and the
-            key result or takeaway. Keep it to 2–3 sentences.
-          </p>
+          <p class="project-desc">Describe your Python project here — what problem it solves, how it works, and the key result or takeaway. Keep it to 2–3 sentences.</p>
           <div class="project-tags">
             <span class="tag">Python</span>
             <span class="tag">Git</span>
           </div>
           <div class="project-links">
-            <a class="project-link" href="https://github.com/kuejeffrey" target="_blank" rel="noreferrer">
-              ↗ GitHub
-            </a>
-            <a class="project-link" href="#" target="_blank" rel="noreferrer">
-              ↗ Live Demo <span style="font-size:10px; opacity:.5;">(add link)</span>
-            </a>
+            <a class="project-link" href="https://github.com/kuejeffrey" target="_blank" rel="noreferrer">↗ GitHub</a>
+            <a class="project-link" href="#">↗ Live Demo <span style="font-size:10px;opacity:.5;">(add link)</span></a>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-num">03 · Networking</div>
           <div class="project-title">Wireshark Network Analysis</div>
-          <p class="project-desc">
-            Captured and analyzed network traffic using Wireshark to identify packet patterns,
-            protocols, and potential security anomalies. Documented findings in a structured write-up.
-          </p>
+          <p class="project-desc">Captured and analyzed network traffic using Wireshark to identify packet patterns, protocols, and potential security anomalies. Documented findings in a structured write-up.</p>
           <div class="project-tags">
             <span class="tag">Wireshark</span>
             <span class="tag">Networking</span>
             <span class="tag">Security</span>
           </div>
           <div class="project-links">
-            <a class="project-link" href="#" target="_blank" rel="noreferrer">
-              ↗ Write-up <span style="font-size:10px; opacity:.5;">(add link)</span>
-            </a>
+            <a class="project-link" href="#">↗ Write-up <span style="font-size:10px;opacity:.5;">(add link)</span></a>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-num">04 · Web</div>
           <div class="project-title">Personal Portfolio Site</div>
-          <p class="project-desc">
-            Designed and built this portfolio from scratch using HTML, CSS, and vanilla JS —
-            no frameworks. Custom dark techy aesthetic with skill animations, a timeline,
-            and project cards.
-          </p>
+          <p class="project-desc">Designed and built this portfolio from scratch using HTML, CSS, and vanilla JS — no frameworks. Custom dark/light theme toggle, skill animations, a timeline, and project cards.</p>
           <div class="project-tags">
             <span class="tag">HTML</span>
             <span class="tag">CSS</span>
             <span class="tag">JavaScript</span>
           </div>
           <div class="project-links">
-            <a class="project-link" href="https://github.com/kuejeffrey" target="_blank" rel="noreferrer">
-              ↗ GitHub
-            </a>
-            <a class="project-link" href="index.html">
-              ↗ Live Demo
-            </a>
+            <a class="project-link" href="https://github.com/kuejeffrey" target="_blank" rel="noreferrer">↗ GitHub</a>
+            <a class="project-link" href="index.html">↗ Live Demo</a>
           </div>
         </div>
 
-        <!-- PLACEHOLDER — copy & fill in for new projects -->
         <div class="project-card" style="border-style:dashed; opacity:.5;">
           <div class="project-num">05 · Coming soon</div>
           <div class="project-title">Next Project</div>
-          <p class="project-desc">
-            Copy this card, fill in the details, add real GitHub + demo links,
-            and remove the dashed border + opacity style.
-          </p>
+          <p class="project-desc">Copy this card, fill in the details, add real GitHub + demo links, and remove the dashed border + opacity style.</p>
           <div class="project-tags"><span class="tag">TBD</span></div>
           <div class="project-links">
             <a class="project-link" href="#">↗ GitHub</a>

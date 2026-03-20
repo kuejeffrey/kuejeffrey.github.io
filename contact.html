@@ -5,22 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jeffrey Kue — Contact</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="theme.js"></script>
 </head>
 <body>
   <div class="wrap">
 
-    <!-- NAV -->
     <nav class="nav">
-      <div class="brand">jeffrey.kue</div>
-      <div class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a class="active" href="contact.html">Contact</a>
+      <div class="nav-left">
+        <div class="brand">jeffrey.kue</div>
+        <div class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a class="active" href="contact.html">Contact</a>
+        </div>
       </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icons"><span>☀️</span><span>🌙</span></span>
+        <span class="toggle-thumb">🌙</span>
+      </button>
     </nav>
 
-    <!-- HEADER -->
     <section class="card hero-card fade-in" style="min-height:180px;">
       <div class="hero-grid-bg"></div>
       <div class="hero-glow"></div>
@@ -29,7 +34,6 @@
       <p>Open to internships, full-time roles, and conversations about product &amp; tech.</p>
     </section>
 
-    <!-- LINKS -->
     <section class="card fade-in">
       <div class="section-label">// reach me at</div>
       <h2>Connect</h2>
@@ -51,10 +55,8 @@
         <span class="contact-val">github.com/kuejeffrey</span>
         <span style="margin-left:auto; color:var(--muted); font-size:16px;">↗</span>
       </a>
-
     </section>
 
-    <!-- MESSAGE FORM -->
     <section class="card fade-in">
       <div class="section-label">// send a message</div>
       <h2>Drop a note</h2>
@@ -91,7 +93,9 @@
       window.location.href = `mailto:jeffreyfkue@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     }
 
-    const obs = new IntersectionObserver(els => els.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
+    const obs = new IntersectionObserver(els => els.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    }), { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
   </script>
 </body>

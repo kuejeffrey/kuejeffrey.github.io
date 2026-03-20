@@ -5,26 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jeffrey Kue — About</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="theme.js"></script>
 </head>
 <body>
   <div class="wrap">
 
-    <!-- NAV -->
     <nav class="nav">
-      <div class="brand">jeffrey.kue</div>
-      <div class="navlinks">
-        <a href="index.html">Home</a>
-        <a class="active" href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+      <div class="nav-left">
+        <div class="brand">jeffrey.kue</div>
+        <div class="navlinks">
+          <a href="index.html">Home</a>
+          <a class="active" href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icons"><span>☀️</span><span>🌙</span></span>
+        <span class="toggle-thumb">🌙</span>
+      </button>
     </nav>
 
     <!-- HEADER -->
     <section class="card hero-card fade-in" style="min-height:220px;">
       <div class="hero-grid-bg"></div>
       <div class="hero-glow"></div>
-
       <div class="hero-inner">
         <div class="hero-text">
           <div class="section-label">// who I am</div>
@@ -34,20 +39,15 @@
             — turning user needs into clear, executable product strategy.
           </p>
           <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
-            <!-- RESUME DOWNLOAD — replace # with actual PDF path -->
-            <a class="btn" href="#" download style="font-size:12px; padding:9px 18px;">
-              ↓ Download Resume
-            </a>
+            <a class="btn" href="#" download style="font-size:12px; padding:9px 18px;">↓ Download Resume</a>
             <a class="linkedin-badge" href="https://www.linkedin.com/in/jeffreyfranklinkue" target="_blank" rel="noreferrer">
-              <span class="li-icon">in</span> LinkedIn
+              <span>in</span> LinkedIn
             </a>
           </div>
         </div>
-
-        <!-- PHOTO SLOT (same as hero on index) -->
+        <!-- PHOTO: replace with <img class="hero-photo" src="photo.jpg" alt="Jeffrey Kue" /> -->
         <div class="hero-photo-wrap">
           <div class="hero-photo-glow"></div>
-          <!-- Replace with: <img class="hero-photo" src="photo.jpg" alt="Jeffrey Kue" /> -->
           <div class="hero-photo-placeholder">
             <span class="icon">📷</span>
             <span>Add photo.jpg<br/>to this folder</span>
@@ -76,7 +76,6 @@
     <section class="card fade-in">
       <div class="section-label">// capabilities</div>
       <h2>Skills</h2>
-
       <div class="skill-cols">
         <div class="skill-group">
           <h4>Technical</h4>
@@ -106,7 +105,6 @@
             <span class="skill-pct">55%</span>
           </div>
         </div>
-
         <div class="skill-group">
           <h4>Product / Leadership</h4>
           <div class="skill-row">
@@ -136,7 +134,6 @@
           </div>
         </div>
       </div>
-
       <div style="margin-top:22px; display:flex; flex-wrap:wrap; gap:8px;">
         <span class="badge">Python</span>
         <span class="badge">SQL</span>
@@ -156,51 +153,34 @@
     <section class="card fade-in">
       <div class="section-label">// experience & education</div>
       <h2>Timeline</h2>
-
       <div class="timeline">
 
         <div class="tl-item">
           <div class="tl-date">2024 – Present</div>
           <div class="tl-title">Software Engineering Learning Assistant & Scrum Master</div>
           <div class="tl-org">UMN Duluth — SE Department</div>
-          <p class="tl-desc">
-            Acting as Learning Assistant for Software Engineering courses while serving as
-            Scrum Master for two student development teams. Facilitating daily standups,
-            sprint planning, retrospectives, and helping teams unblock and deliver.
-          </p>
+          <p class="tl-desc">Acting as Learning Assistant for Software Engineering courses while serving as Scrum Master for two student development teams. Facilitating daily standups, sprint planning, retrospectives, and helping teams unblock and deliver.</p>
         </div>
 
         <div class="tl-item">
           <div class="tl-date">2023 – Present</div>
           <div class="tl-title">President — HLUB</div>
           <div class="tl-org">Hmong Living in Unity and Balance · UMN Duluth</div>
-          <p class="tl-desc">
-            Lead a student organization representing Hmong culture and community on campus.
-            Coordinate events, manage a leadership team, and serve as a student voice through
-            the Office of Diversity and Inclusion (ODI).
-          </p>
+          <p class="tl-desc">Lead a student organization representing Hmong culture and community on campus. Coordinate events, manage a leadership team, and serve as a student voice through the Office of Diversity and Inclusion (ODI).</p>
         </div>
 
         <div class="tl-item">
           <div class="tl-date">Fall 2024</div>
           <div class="tl-title">Product Owner — MIS 3223</div>
           <div class="tl-org">Systems Analysis & Design · UMN Duluth</div>
-          <p class="tl-desc">
-            Led an Agile team as Product Owner designing a class-selection system for the
-            UMD College of Pharmacy. Defined user stories, ran sprint planning, and translated
-            stakeholder requirements into actionable backlog items.
-          </p>
+          <p class="tl-desc">Led an Agile team as Product Owner designing a class-selection system for the UMD College of Pharmacy. Defined user stories, ran sprint planning, and translated stakeholder requirements into actionable backlog items.</p>
         </div>
 
         <div class="tl-item">
           <div class="tl-date">2022 – Present</div>
           <div class="tl-title">B.S. Computer Science</div>
           <div class="tl-org">University of Minnesota Duluth · Minor: Management Information Systems</div>
-          <p class="tl-desc">
-            Senior-year CS student with coursework spanning algorithms, networking, security,
-            databases, and systems design. Minoring in MIS to bridge technical and business strategy.
-            Expected graduation: 2026.
-          </p>
+          <p class="tl-desc">Senior-year CS student with coursework spanning algorithms, networking, security, databases, and systems design. Minoring in MIS to bridge technical and business strategy. Expected graduation: 2026.</p>
         </div>
 
       </div>
@@ -214,20 +194,17 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
     const obs = new IntersectionObserver(els => {
       els.forEach(e => {
         if (e.isIntersecting) {
           e.target.classList.add('visible');
           e.target.querySelectorAll('.skill-bar').forEach(bar => {
-            const pct = parseFloat(bar.dataset.pct);
-            bar.style.width = (pct * 100) + '%';
+            bar.style.width = (parseFloat(bar.dataset.pct) * 100) + '%';
             setTimeout(() => bar.classList.add('animated'), 50);
           });
         }
       });
     }, { threshold: 0.1 });
-
     document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
   </script>
 </body>

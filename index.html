@@ -5,19 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jeffrey Kue — Product & Tech</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="theme.js"></script>
 </head>
 <body>
   <div class="wrap">
 
-    <!-- NAV -->
     <nav class="nav">
-      <div class="brand">jeffrey.kue</div>
-      <div class="navlinks">
-        <a class="active" href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+      <div class="nav-left">
+        <div class="brand">jeffrey.kue</div>
+        <div class="navlinks">
+          <a class="active" href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icons"><span>☀️</span><span>🌙</span></span>
+        <span class="toggle-thumb">🌙</span>
+      </button>
     </nav>
 
     <!-- HERO -->
@@ -42,7 +48,7 @@
             I turn user needs into clear goals — aspiring Product &amp; Technical PM.
           </p>
 
-          <div class="hero-meta" style="margin-top:16px;">
+          <div class="hero-meta">
             <span class="badge accent">Product Management</span>
             <span class="badge accent">Technical PM</span>
             <span class="badge">UMN Duluth</span>
@@ -53,15 +59,12 @@
             <a class="btn" href="projects.html">View Projects →</a>
             <a class="btn btn-ghost" href="about.html">About Me</a>
             <a class="linkedin-badge" href="https://www.linkedin.com/in/jeffreyfranklinkue" target="_blank" rel="noreferrer">
-              <span class="li-icon">in</span> LinkedIn
+              <span>in</span> LinkedIn
             </a>
           </div>
         </div>
 
-        <!-- PHOTO SLOT -->
-        <!-- TO ADD YOUR PHOTO: save your image as photo.jpg in this folder,
-             then replace the div below with:
-             <img class="hero-photo" src="photo.jpg" alt="Jeffrey Kue" /> -->
+        <!-- PHOTO: replace placeholder div with <img class="hero-photo" src="photo.jpg" alt="Jeffrey Kue" /> -->
         <div class="hero-photo-wrap">
           <div class="hero-photo-glow"></div>
           <div class="hero-photo-placeholder">
