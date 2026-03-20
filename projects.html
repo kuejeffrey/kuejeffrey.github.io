@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jeffrey Kue — Projects</title>
+  <title>Jeffrey Kue - Projects</title>
   <link rel="stylesheet" href="style.css" />
   <script src="theme.js"></script>
 </head>
@@ -21,8 +21,7 @@
         </div>
       </div>
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-        <span class="toggle-icons"><span>☀️</span><span>🌙</span></span>
-        <span class="toggle-thumb">🌙</span>
+        <span class="toggle-thumb"></span>
       </button>
     </nav>
 
@@ -31,7 +30,7 @@
       <div class="hero-glow"></div>
       <div class="section-label">// what I've built</div>
       <h1 style="font-size:clamp(28px,5vw,44px);">Projects</h1>
-      <p>A snapshot of my technical and product work — what I built, why it matters, and what I learned.</p>
+      <p>A snapshot of my technical and product work - what I built, why it matters, and what I learned.</p>
     </section>
 
     <section class="card fade-in">
@@ -49,21 +48,21 @@
             <span class="tag">UML</span>
           </div>
           <div class="project-links">
-            <a class="project-link" href="#">↗ Case Study <span style="font-size:10px;opacity:.5;">(add link)</span></a>
+            <a class="project-link" href="#">Case Study <span style="font-size:10px;opacity:.5;">(add link)</span></a>
           </div>
         </div>
 
         <div class="project-card">
-          <div class="project-num">02 · Python</div>
-          <div class="project-title">Project Two</div>
-          <p class="project-desc">Describe your Python project here — what problem it solves, how it works, and the key result or takeaway. Keep it to 2–3 sentences.</p>
+          <div class="project-num">02 · Product Strategy</div>
+          <div class="project-title">Northstar Project</div>
+          <p class="project-desc">Developed a Northstar-style product concept focused on defining the user problem, shaping a clearer product direction, and translating ideas into actionable deliverables. Emphasized product thinking, structured communication, and solution framing.</p>
           <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Git</span>
+            <span class="tag">Product Strategy</span>
+            <span class="tag">Research</span>
+            <span class="tag">Roadmapping</span>
           </div>
           <div class="project-links">
-            <a class="project-link" href="https://github.com/kuejeffrey" target="_blank" rel="noreferrer">↗ GitHub</a>
-            <a class="project-link" href="#">↗ Live Demo <span style="font-size:10px;opacity:.5;">(add link)</span></a>
+            <a class="project-link" href="#">Case Study <span style="font-size:10px;opacity:.5;">(add link)</span></a>
           </div>
         </div>
 
@@ -77,33 +76,33 @@
             <span class="tag">Security</span>
           </div>
           <div class="project-links">
-            <a class="project-link" href="#">↗ Write-up <span style="font-size:10px;opacity:.5;">(add link)</span></a>
+            <a class="project-link" href="#">Write-up <span style="font-size:10px;opacity:.5;">(add link)</span></a>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-num">04 · Web</div>
           <div class="project-title">Personal Portfolio Site</div>
-          <p class="project-desc">Designed and built this portfolio from scratch using HTML, CSS, and vanilla JS — no frameworks. Custom dark/light theme toggle, skill animations, a timeline, and project cards.</p>
+          <p class="project-desc">Designed and built this portfolio from scratch using HTML, CSS, and vanilla JS. Custom dark/light theme toggle, skill animations, a timeline, and project cards.</p>
           <div class="project-tags">
             <span class="tag">HTML</span>
             <span class="tag">CSS</span>
             <span class="tag">JavaScript</span>
           </div>
           <div class="project-links">
-            <a class="project-link" href="https://github.com/kuejeffrey" target="_blank" rel="noreferrer">↗ GitHub</a>
-            <a class="project-link" href="index.html">↗ Live Demo</a>
+            <a class="project-link" href="https://github.com/kuejeffrey" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="project-link" href="index.html">Live Demo</a>
           </div>
         </div>
 
         <div class="project-card" style="border-style:dashed; opacity:.5;">
           <div class="project-num">05 · Coming soon</div>
           <div class="project-title">Next Project</div>
-          <p class="project-desc">Copy this card, fill in the details, add real GitHub + demo links, and remove the dashed border + opacity style.</p>
+          <p class="project-desc">Copy this card, fill in the details, add real GitHub and demo links, and remove the dashed border plus opacity style.</p>
           <div class="project-tags"><span class="tag">TBD</span></div>
           <div class="project-links">
-            <a class="project-link" href="#">↗ GitHub</a>
-            <a class="project-link" href="#">↗ Live Demo</a>
+            <a class="project-link" href="#">GitHub</a>
+            <a class="project-link" href="#">Live Demo</a>
           </div>
         </div>
 
@@ -111,17 +110,17 @@
     </section>
 
     <footer class="footer">
-      <span>© <span id="year"></span> <span class="footer-accent">Jeffrey Franklin Kue</span></span>
+      <span>&copy; <span id="year"></span> <span class="footer-accent">Jeffrey Franklin Kue</span></span>
       <span style="font-size:11px;">Built from scratch · UMD CS</span>
     </footer>
   </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-    const obs = new IntersectionObserver(els => els.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('visible');
+    const obs = new IntersectionObserver((els) => els.forEach((e) => {
+      if (e.isIntersecting) e.target.classList.add("visible");
     }), { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+    document.querySelectorAll(".fade-in").forEach((el) => obs.observe(el));
   </script>
 </body>
 </html>

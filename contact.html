@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jeffrey Kue — Contact</title>
+  <title>Jeffrey Kue - Contact</title>
   <link rel="stylesheet" href="style.css" />
   <script src="theme.js"></script>
 </head>
@@ -21,8 +21,7 @@
         </div>
       </div>
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-        <span class="toggle-icons"><span>☀️</span><span>🌙</span></span>
-        <span class="toggle-thumb">🌙</span>
+        <span class="toggle-thumb"></span>
       </button>
     </nav>
 
@@ -31,7 +30,7 @@
       <div class="hero-glow"></div>
       <div class="section-label">// get in touch</div>
       <h1 style="font-size:clamp(28px,5vw,44px);">Contact</h1>
-      <p>Open to internships, full-time roles, and conversations about product &amp; tech.</p>
+      <p>Open to internships, full-time roles, and conversations about product and tech.</p>
     </section>
 
     <section class="card fade-in">
@@ -41,26 +40,26 @@
       <a class="contact-link" href="mailto:jeffreyfkue@gmail.com">
         <span class="contact-icon">Email</span>
         <span class="contact-val">jeffreyfkue@gmail.com</span>
-        <span style="margin-left:auto; color:var(--muted); font-size:16px;">↗</span>
+        <span style="margin-left:auto; color:var(--muted); font-size:16px;">-&gt;</span>
       </a>
 
       <a class="contact-link" href="https://www.linkedin.com/in/jeffreyfranklinkue" target="_blank" rel="noreferrer">
         <span class="contact-icon">LinkedIn</span>
         <span class="contact-val">linkedin.com/in/jeffreyfranklinkue</span>
-        <span style="margin-left:auto; color:var(--muted); font-size:16px;">↗</span>
+        <span style="margin-left:auto; color:var(--muted); font-size:16px;">-&gt;</span>
       </a>
 
       <a class="contact-link" href="https://github.com/kuejeffrey" target="_blank" rel="noreferrer">
         <span class="contact-icon">GitHub</span>
         <span class="contact-val">github.com/kuejeffrey</span>
-        <span style="margin-left:auto; color:var(--muted); font-size:16px;">↗</span>
+        <span style="margin-left:auto; color:var(--muted); font-size:16px;">-&gt;</span>
       </a>
     </section>
 
     <section class="card fade-in">
       <div class="section-label">// send a message</div>
       <h2>Drop a note</h2>
-      <p style="margin-bottom:6px;">Clicking "Send" will open your email client with your message pre-filled.</p>
+      <p style="margin-bottom:6px;">Clicking "Send" opens your email app with your message pre-filled.</p>
 
       <label for="name">Name</label>
       <input id="name" type="text" placeholder="Your name" />
@@ -72,12 +71,12 @@
       <textarea id="msg" rows="5" placeholder="Write your message..."></textarea>
 
       <button class="btn" onclick="sendMail()" style="cursor:pointer; border:none; margin-top:18px;">
-        Send via Email →
+        Send via Email -&gt;
       </button>
     </section>
 
     <footer class="footer">
-      <span>© <span id="year"></span> <span class="footer-accent">Jeffrey Franklin Kue</span></span>
+      <span>&copy; <span id="year"></span> <span class="footer-accent">Jeffrey Franklin Kue</span></span>
       <span style="font-size:11px;">Built from scratch · UMD CS</span>
     </footer>
   </div>
@@ -86,17 +85,17 @@
     document.getElementById("year").textContent = new Date().getFullYear();
 
     function sendMail() {
-      const name    = document.getElementById('name').value || 'Someone';
-      const subject = document.getElementById('subject').value || 'Hello from your portfolio';
-      const msg     = document.getElementById('msg').value || '';
-      const body    = `Hi Jeffrey,\n\nMy name is ${name}.\n\n${msg}`;
+      const name = document.getElementById("name").value || "Someone";
+      const subject = document.getElementById("subject").value || "Hello from your portfolio";
+      const msg = document.getElementById("msg").value || "";
+      const body = `Hi Jeffrey,\n\nMy name is ${name}.\n\n${msg}`;
       window.location.href = `mailto:jeffreyfkue@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     }
 
-    const obs = new IntersectionObserver(els => els.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('visible');
+    const obs = new IntersectionObserver((els) => els.forEach((e) => {
+      if (e.isIntersecting) e.target.classList.add("visible");
     }), { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+    document.querySelectorAll(".fade-in").forEach((el) => obs.observe(el));
   </script>
 </body>
 </html>

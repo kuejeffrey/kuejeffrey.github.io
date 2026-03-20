@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jeffrey Kue — Product & Tech</title>
+  <title>Jeffrey Kue - Product &amp; Tech</title>
   <link rel="stylesheet" href="style.css" />
   <script src="theme.js"></script>
 </head>
@@ -21,12 +21,10 @@
         </div>
       </div>
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-        <span class="toggle-icons"><span>☀️</span><span>🌙</span></span>
-        <span class="toggle-thumb">🌙</span>
+        <span class="toggle-thumb"></span>
       </button>
     </nav>
 
-    <!-- HERO -->
     <section class="card hero-card fade-in">
       <div class="hero-grid-bg"></div>
       <div class="hero-glow"></div>
@@ -45,7 +43,7 @@
 
           <p style="max-width:520px; font-size:15px;">
             CS senior at UMD bridging the gap between people and technology.
-            I turn user needs into clear goals — aspiring Product &amp; Technical PM.
+            I turn user needs into clear goals - aspiring Product and Technical PM.
           </p>
 
           <div class="hero-meta">
@@ -56,26 +54,23 @@
           </div>
 
           <div class="hero-btns">
-            <a class="btn" href="projects.html">View Projects →</a>
+            <a class="btn" href="./projects.html">View Projects</a>
             <a class="btn btn-ghost" href="about.html">About Me</a>
-            <a class="linkedin-badge" href="https://www.linkedin.com/in/jeffreyfranklinkue" target="_blank" rel="noreferrer">
-              <span>in</span> LinkedIn
-            </a>
           </div>
         </div>
 
-        <!-- PHOTO: replace placeholder div with <img class="hero-photo" src="photo.jpg" alt="Jeffrey Kue" /> -->
+        <!--
         <div class="hero-photo-wrap">
           <div class="hero-photo-glow"></div>
           <div class="hero-photo-placeholder">
-            <span class="icon">📷</span>
-            <span>Add photo.jpg<br/>to this folder</span>
+            <span class="icon">[ photo ]</span>
+            <span>Add photo.jpg<br />to this folder</span>
           </div>
         </div>
+        -->
       </div>
     </section>
 
-    <!-- CURRENT WORK -->
     <section class="card fade-in">
       <div class="section-label">// current focus</div>
       <h2>What I'm working on</h2>
@@ -84,7 +79,7 @@
         <div class="project-card">
           <div class="project-num">01</div>
           <div class="project-title">Pharmacy Scheduling System</div>
-          <p class="project-desc">Acting as Product Owner for MIS 3223 — designing a class-selection system for the College of Pharmacy based on career interest. Coordinating stakeholder requirements and leading sprint planning.</p>
+          <p class="project-desc">Product Owner for my Systems Analysis class since January 2026, leading a pharmacy class-selection system for the College of Pharmacy. Coordinating stakeholder requirements, refining backlog priorities, and guiding sprint planning.</p>
           <div class="project-tags">
             <span class="tag">Product Owner</span>
             <span class="tag">Systems Design</span>
@@ -94,8 +89,8 @@
 
         <div class="project-card">
           <div class="project-num">02</div>
-          <div class="project-title">SE Learning Assistant & Scrum Master</div>
-          <p class="project-desc">Software Engineering LA acting as Scrum Master for two student teams — facilitating standups, sprint reviews, and helping teams stay unblocked and on track.</p>
+          <div class="project-title">SWE Learning Assistant &amp; Scrum Master</div>
+          <p class="project-desc">Software Engineering Learning Assistant since January 2026, supporting students while acting as Scrum Master for two teams. Facilitating standups, sprint reviews, and helping teams stay unblocked and on track.</p>
           <div class="project-tags">
             <span class="tag">Scrum Master</span>
             <span class="tag">Agile</span>
@@ -106,7 +101,7 @@
         <div class="project-card">
           <div class="project-num">03</div>
           <div class="project-title">HLUB Club President</div>
-          <p class="project-desc">Leading Hmong Living in Unity and Balance — representing the club and serving as a POC student voice through the Office of Diversity and Inclusion (ODI).</p>
+          <p class="project-desc">Leading Hmong Living in Unity and Balance, representing the club and serving as a student voice through the Office of Diversity and Inclusion.</p>
           <div class="project-tags">
             <span class="tag">Leadership</span>
             <span class="tag">Community</span>
@@ -118,17 +113,17 @@
     </section>
 
     <footer class="footer">
-      <span>© <span id="year"></span> <span class="footer-accent">Jeffrey Franklin Kue</span></span>
+      <span>&copy; <span id="year"></span> <span class="footer-accent">Jeffrey Franklin Kue</span></span>
       <span style="font-size:11px;">Built from scratch · UMD CS</span>
     </footer>
   </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-    const obs = new IntersectionObserver(els => els.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('visible');
+    const obs = new IntersectionObserver((els) => els.forEach((e) => {
+      if (e.isIntersecting) e.target.classList.add("visible");
     }), { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+    document.querySelectorAll(".fade-in").forEach((el) => obs.observe(el));
   </script>
 </body>
 </html>
