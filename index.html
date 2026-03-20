@@ -3,58 +3,115 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jeffrey Kue | Home</title>
+  <title>Jeffrey Kue — Product & Tech</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="wrap">
-    <div class="nav">
-      <div class="brand">Jeffrey Kue</div>
+
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="brand">jeffrey.kue</div>
       <div class="navlinks">
         <a class="active" href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
       </div>
-    </div>
+    </nav>
 
-    <section class="card">
-      <span class="badge">Personal Website</span>
-      <h1>Hi, I’m Jeffrey Kue 👋</h1>
-      <p>
-        I’m a student and aspiring tech professional focused on building practical projects and growing my skills.
-        This site highlights my background, work, and ways to connect.
+    <!-- HERO -->
+    <section class="card hero-card fade-in">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-glow"></div>
+
+      <div class="hero-status">
+        <span class="dot"></span>
+        Open to opportunities · Class of 2026
+      </div>
+
+      <h1>
+        <span class="line1">// Hello, world</span>
+        I'm <span class="accent">Jeffrey Kue</span>
+      </h1>
+
+      <p style="max-width:560px; font-size:16px;">
+        CS senior at UMD bridging the gap between people and technology.
+        I turn user needs into clear goals — aspiring Product &amp; Technical PM.
       </p>
-      <a class="btn" href="projects.html">View Projects</a>
-    </section>
 
-    <section class="card">
-      <h2>What I’m working on</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Project Area</h3>
-          <p>For my Systems Analysis and Design class (MIS3223), I am the Product Owner designing a system for the College of Pharmacy, 
-            implementing a way for students to be able to select classes based on their career interest per request of our stakeholders.</p>
-        </div>
-        <div class="card">
-          <h3>Leadership</h3>
-          <p>I am currently President for Hmong Living in Unity and Balance (HLUB).
-            Not only do I reperesnet HLUB, but I also reprsent the Office of Diversity and Inclusion (ODI)
-            as a student leader and voice for POC.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Learning</h3>
-          <p>Example: Python, cloud computing, networking, etc.</p>
-        </div>
+      <div class="hero-meta">
+        <span class="badge accent">Product Management</span>
+        <span class="badge accent">Technical PM</span>
+        <span class="badge">UMN Duluth</span>
+        <span class="badge">CS + MIS</span>
+      </div>
+
+      <div class="hero-btns">
+        <a class="btn" href="projects.html">View Projects →</a>
+        <a class="btn btn-ghost" href="about.html">About Me</a>
       </div>
     </section>
 
-    <div class="footer">© <span id="year"></span> Jeffrey Kue</div>
+    <!-- WHAT I'M WORKING ON -->
+    <section class="card fade-in" style="animation-delay:.1s">
+      <div class="section-label">// current focus</div>
+      <h2>What I'm working on</h2>
+      <div class="grid">
+
+        <div class="project-card">
+          <div class="project-num">01</div>
+          <div class="project-title">Pharmacy Scheduling System</div>
+          <p class="project-desc">
+            Acting as Product Owner for MIS 3223 — designing a class-selection system for the College of Pharmacy based on career interest. Coordinating stakeholder requirements and leading sprint planning.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Product Owner</span>
+            <span class="tag">Systems Design</span>
+            <span class="tag">Agile</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-num">02</div>
+          <div class="project-title">HLUB Club President</div>
+          <p class="project-desc">
+            Leading Hmong Living in Unity and Balance — representing the club and serving as a student leader and POC voice through the Office of Diversity and Inclusion (ODI).
+          </p>
+          <div class="project-tags">
+            <span class="tag">Leadership</span>
+            <span class="tag">Community</span>
+            <span class="tag">ODI</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-num">03</div>
+          <div class="project-title">Continuous Learning</div>
+          <p class="project-desc">
+            Building skills in Python, cloud fundamentals, and networking. Exploring how technical depth strengthens product decision-making.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Cloud</span>
+            <span class="tag">Networking</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> <span class="footer-accent">Jeffrey Franklin Kue</span></span>
+      <span style="font-size:11px;">Built from scratch · UMD CS</span>
+    </footer>
   </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    // Fade-in observer
+    const obs = new IntersectionObserver(els => els.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
   </script>
 </body>
 </html>

@@ -3,56 +3,141 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jeffrey Kue | Projects</title>
+  <title>Jeffrey Kue — Projects</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="wrap">
-    <div class="nav">
-      <div class="brand">Jeffrey Kue</div>
+
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="brand">jeffrey.kue</div>
       <div class="navlinks">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a class="active" href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
       </div>
-    </div>
+    </nav>
 
-    <section class="card">
-      <h1>Projects</h1>
-      <p>Keep projects short and professional: what it is, what you used, what you learned.</p>
+    <!-- HEADER -->
+    <section class="card hero-card fade-in" style="min-height:180px;">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-glow"></div>
+      <div class="section-label">// what I've built</div>
+      <h1 style="font-size:clamp(28px,5vw,44px);">Projects</h1>
+      <p>A snapshot of my technical and product work — what I built, why it matters, and what I learned.</p>
     </section>
 
-    <section class="card">
-      <div class="grid">
-        <div class="card">
-          <h3>Project One</h3>
-          <p><strong>Tech:</strong> Python, Git</p>
-          <p>1–2 lines on what it does and why it matters.</p>
-          <p><a href="#">GitHub link</a> (add later)</p>
+    <!-- PROJECT CARDS -->
+    <section class="card fade-in">
+      <div class="section-label">// featured work</div>
+      <div class="grid" style="margin-top:8px;">
+
+        <div class="project-card">
+          <div class="project-num">01 · Systems Design</div>
+          <div class="project-title">Pharmacy Class-Selection System</div>
+          <p class="project-desc">
+            Led as Product Owner in MIS 3223 to design a system allowing College of Pharmacy students
+            to select classes based on their career interests. Managed stakeholder interviews, wrote
+            user stories, and facilitated sprint reviews with a cross-functional team.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Product Owner</span>
+            <span class="tag">Systems Analysis</span>
+            <span class="tag">Agile</span>
+            <span class="tag">UML</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" href="#">
+              <span>↗</span> Case Study (add later)
+            </a>
+          </div>
         </div>
 
-        <div class="card">
-          <h3>Project Two</h3>
-          <p><strong>Tech:</strong> Wireshark, Networking</p>
-          <p>1–2 lines describing the result or key takeaway.</p>
-          <p><a href="#">Write-up link</a> (add later)</p>
+        <div class="project-card">
+          <div class="project-num">02 · Python</div>
+          <div class="project-title">Project Two</div>
+          <p class="project-desc">
+            Describe your Python project here — what problem it solves, how it works, and the
+            key result or takeaway. Keep it to 2–3 sentences.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Git</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" href="#">
+              <span>↗</span> GitHub (add later)
+            </a>
+          </div>
         </div>
 
-        <div class="card">
-          <h3>Project Three</h3>
-          <p><strong>Tech:</strong> Web / Cloud</p>
-          <p>Short description here.</p>
-          <p><a href="#">Demo link</a> (add later)</p>
+        <div class="project-card">
+          <div class="project-num">03 · Networking</div>
+          <div class="project-title">Wireshark Network Analysis</div>
+          <p class="project-desc">
+            Captured and analyzed network traffic using Wireshark to identify packet patterns,
+            protocols, and potential security anomalies. Documented findings in a structured write-up.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Wireshark</span>
+            <span class="tag">Networking</span>
+            <span class="tag">Security</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" href="#">
+              <span>↗</span> Write-up (add later)
+            </a>
+          </div>
         </div>
+
+        <div class="project-card">
+          <div class="project-num">04 · Web / Cloud</div>
+          <div class="project-title">Personal Portfolio Site</div>
+          <p class="project-desc">
+            Designed and built this portfolio from scratch using pure HTML, CSS, and vanilla JS —
+            no frameworks. Custom dark techy aesthetic with skill animations, a timeline, and
+            project cards.
+          </p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" href="#">
+              <span>↗</span> GitHub (add later)
+            </a>
+          </div>
+        </div>
+
+        <!-- PLACEHOLDER — duplicate this card for new projects -->
+        <div class="project-card" style="border-style:dashed; opacity:.5;">
+          <div class="project-num">05 · Coming soon</div>
+          <div class="project-title">Next Project</div>
+          <p class="project-desc">
+            Add your next project here. Copy this card, fill in the details, and remove the
+            dashed border + opacity.
+          </p>
+          <div class="project-tags">
+            <span class="tag">TBD</span>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <div class="footer">© <span id="year"></span> Jeffrey Kue</div>
+    <footer class="footer">
+      <span>© <span id="year"></span> <span class="footer-accent">Jeffrey Franklin Kue</span></span>
+      <span style="font-size:11px;">Built from scratch · UMD CS</span>
+    </footer>
   </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    const obs = new IntersectionObserver(els => els.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
   </script>
 </body>
 </html>
