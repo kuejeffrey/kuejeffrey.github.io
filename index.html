@@ -25,36 +25,55 @@
       <div class="hero-grid-bg"></div>
       <div class="hero-glow"></div>
 
-      <div class="hero-status">
-        <span class="dot"></span>
-        Open to opportunities · Class of 2026
-      </div>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-status">
+            <span class="dot"></span>
+            Open to opportunities · Class of 2026
+          </div>
 
-      <h1>
-        <span class="line1">// Hello, world</span>
-        I'm <span class="accent">Jeffrey Kue</span>
-      </h1>
+          <h1>
+            <span class="line1">// Hello, world</span>
+            I'm <span class="accent">Jeffrey Kue</span>
+          </h1>
 
-      <p style="max-width:560px; font-size:16px;">
-        CS senior at UMD bridging the gap between people and technology.
-        I turn user needs into clear goals — aspiring Product &amp; Technical PM.
-      </p>
+          <p style="max-width:520px; font-size:15px;">
+            CS senior at UMD bridging the gap between people and technology.
+            I turn user needs into clear goals — aspiring Product &amp; Technical PM.
+          </p>
 
-      <div class="hero-meta">
-        <span class="badge accent">Product Management</span>
-        <span class="badge accent">Technical PM</span>
-        <span class="badge">UMN Duluth</span>
-        <span class="badge">CS + MIS</span>
-      </div>
+          <div class="hero-meta" style="margin-top:16px;">
+            <span class="badge accent">Product Management</span>
+            <span class="badge accent">Technical PM</span>
+            <span class="badge">UMN Duluth</span>
+            <span class="badge">CS + MIS</span>
+          </div>
 
-      <div class="hero-btns">
-        <a class="btn" href="projects.html">View Projects →</a>
-        <a class="btn btn-ghost" href="about.html">About Me</a>
+          <div class="hero-btns">
+            <a class="btn" href="projects.html">View Projects →</a>
+            <a class="btn btn-ghost" href="about.html">About Me</a>
+            <a class="linkedin-badge" href="https://www.linkedin.com/in/jeffreyfranklinkue" target="_blank" rel="noreferrer">
+              <span class="li-icon">in</span> LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- PHOTO SLOT -->
+        <!-- TO ADD YOUR PHOTO: save your image as photo.jpg in this folder,
+             then replace the div below with:
+             <img class="hero-photo" src="photo.jpg" alt="Jeffrey Kue" /> -->
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-glow"></div>
+          <div class="hero-photo-placeholder">
+            <span class="icon">📷</span>
+            <span>Add photo.jpg<br/>to this folder</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- WHAT I'M WORKING ON -->
-    <section class="card fade-in" style="animation-delay:.1s">
+    <!-- CURRENT WORK -->
+    <section class="card fade-in">
       <div class="section-label">// current focus</div>
       <h2>What I'm working on</h2>
       <div class="grid">
@@ -62,9 +81,7 @@
         <div class="project-card">
           <div class="project-num">01</div>
           <div class="project-title">Pharmacy Scheduling System</div>
-          <p class="project-desc">
-            Acting as Product Owner for MIS 3223 — designing a class-selection system for the College of Pharmacy based on career interest. Coordinating stakeholder requirements and leading sprint planning.
-          </p>
+          <p class="project-desc">Acting as Product Owner for MIS 3223 — designing a class-selection system for the College of Pharmacy based on career interest. Coordinating stakeholder requirements and leading sprint planning.</p>
           <div class="project-tags">
             <span class="tag">Product Owner</span>
             <span class="tag">Systems Design</span>
@@ -74,27 +91,23 @@
 
         <div class="project-card">
           <div class="project-num">02</div>
-          <div class="project-title">HLUB Club President</div>
-          <p class="project-desc">
-            Leading Hmong Living in Unity and Balance — representing the club and serving as a student leader and POC voice through the Office of Diversity and Inclusion (ODI).
-          </p>
+          <div class="project-title">SE Learning Assistant & Scrum Master</div>
+          <p class="project-desc">Software Engineering LA acting as Scrum Master for two student teams — facilitating standups, sprint reviews, and helping teams stay unblocked and on track.</p>
           <div class="project-tags">
-            <span class="tag">Leadership</span>
-            <span class="tag">Community</span>
-            <span class="tag">ODI</span>
+            <span class="tag">Scrum Master</span>
+            <span class="tag">Agile</span>
+            <span class="tag">Mentorship</span>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-num">03</div>
-          <div class="project-title">Continuous Learning</div>
-          <p class="project-desc">
-            Building skills in Python, cloud fundamentals, and networking. Exploring how technical depth strengthens product decision-making.
-          </p>
+          <div class="project-title">HLUB Club President</div>
+          <p class="project-desc">Leading Hmong Living in Unity and Balance — representing the club and serving as a POC student voice through the Office of Diversity and Inclusion (ODI).</p>
           <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Cloud</span>
-            <span class="tag">Networking</span>
+            <span class="tag">Leadership</span>
+            <span class="tag">Community</span>
+            <span class="tag">ODI</span>
           </div>
         </div>
 
@@ -109,8 +122,9 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-    // Fade-in observer
-    const obs = new IntersectionObserver(els => els.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
+    const obs = new IntersectionObserver(els => els.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    }), { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
   </script>
 </body>

@@ -20,16 +20,40 @@
       </div>
     </nav>
 
-    <!-- INTRO -->
+    <!-- HEADER -->
     <section class="card hero-card fade-in" style="min-height:220px;">
       <div class="hero-grid-bg"></div>
       <div class="hero-glow"></div>
-      <div class="section-label">// who I am</div>
-      <h1 style="font-size:clamp(28px,5vw,44px);">About Me</h1>
-      <p style="max-width:600px; font-size:15px;">
-        CS senior at the University of Minnesota Duluth, minoring in MIS.
-        I bridge the gap between people and technology — turning user needs into clear, executable product strategy.
-      </p>
+
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="section-label">// who I am</div>
+          <h1 style="font-size:clamp(28px,5vw,44px);">About Me</h1>
+          <p style="max-width:540px; font-size:15px;">
+            CS senior at UMD, minoring in MIS. I bridge the gap between people and technology
+            — turning user needs into clear, executable product strategy.
+          </p>
+          <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+            <!-- RESUME DOWNLOAD — replace # with actual PDF path -->
+            <a class="btn" href="#" download style="font-size:12px; padding:9px 18px;">
+              ↓ Download Resume
+            </a>
+            <a class="linkedin-badge" href="https://www.linkedin.com/in/jeffreyfranklinkue" target="_blank" rel="noreferrer">
+              <span class="li-icon">in</span> LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- PHOTO SLOT (same as hero on index) -->
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-glow"></div>
+          <!-- Replace with: <img class="hero-photo" src="photo.jpg" alt="Jeffrey Kue" /> -->
+          <div class="hero-photo-placeholder">
+            <span class="icon">📷</span>
+            <span>Add photo.jpg<br/>to this folder</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- BIO -->
@@ -38,13 +62,13 @@
       <h2>The story</h2>
       <p style="margin-bottom:12px;">
         I'm passionate about the intersection of technology and human experience. My focus is on translating
-        ambiguous user problems into clear goals and practical solutions — whether I'm leading a sprint, synthesizing
-        stakeholder feedback, or building out a system design.
+        ambiguous user problems into clear goals and practical solutions — whether I'm leading a sprint,
+        synthesizing stakeholder feedback, or designing a system end-to-end.
       </p>
       <p>
         I aim for Product Management or Technical PM/TPM roles where my analytical thinking
-        and hands-on leadership experience converge. I value ownership, consistency, and setting clear expectations
-        even when priorities shift.
+        and hands-on leadership experience converge. I value ownership, consistency, and setting
+        clear expectations even when priorities shift.
       </p>
     </section>
 
@@ -92,8 +116,8 @@
           </div>
           <div class="skill-row">
             <span class="skill-name">Agile / Scrum</span>
-            <div class="skill-bar-wrap"><div class="skill-bar" data-pct="0.75"></div></div>
-            <span class="skill-pct">75%</span>
+            <div class="skill-bar-wrap"><div class="skill-bar" data-pct="0.82"></div></div>
+            <span class="skill-pct">82%</span>
           </div>
           <div class="skill-row">
             <span class="skill-name">Stakeholder Mgmt</span>
@@ -123,6 +147,7 @@
         <span class="badge">Stakeholder Management</span>
         <span class="badge">Systems Analysis</span>
         <span class="badge accent">Product Ownership</span>
+        <span class="badge accent">Scrum Master</span>
         <span class="badge accent">Team Leadership</span>
       </div>
     </section>
@@ -133,6 +158,17 @@
       <h2>Timeline</h2>
 
       <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-date">2024 – Present</div>
+          <div class="tl-title">Software Engineering Learning Assistant & Scrum Master</div>
+          <div class="tl-org">UMN Duluth — SE Department</div>
+          <p class="tl-desc">
+            Acting as Learning Assistant for Software Engineering courses while serving as
+            Scrum Master for two student development teams. Facilitating daily standups,
+            sprint planning, retrospectives, and helping teams unblock and deliver.
+          </p>
+        </div>
 
         <div class="tl-item">
           <div class="tl-date">2023 – Present</div>
@@ -170,15 +206,6 @@
       </div>
     </section>
 
-    <!-- RESUME -->
-    <section class="card fade-in">
-      <div class="section-label">// resume</div>
-      <h2>Resume</h2>
-      <p>Download or view my full resume — includes education, experience, and projects.</p>
-      <a class="btn btn-ghost" href="#" style="margin-top:14px;">↓ Download Resume (PDF)</a>
-      <p style="font-size:12px; margin-top:10px; font-family:var(--mono);">(replace # with your actual PDF link)</p>
-    </section>
-
     <footer class="footer">
       <span>© <span id="year"></span> <span class="footer-accent">Jeffrey Franklin Kue</span></span>
       <span style="font-size:11px;">Built from scratch · UMD CS</span>
@@ -192,7 +219,6 @@
       els.forEach(e => {
         if (e.isIntersecting) {
           e.target.classList.add('visible');
-          // animate skill bars inside this element
           e.target.querySelectorAll('.skill-bar').forEach(bar => {
             const pct = parseFloat(bar.dataset.pct);
             bar.style.width = (pct * 100) + '%';

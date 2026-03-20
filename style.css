@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
   --bg: #080a0e;
@@ -16,7 +16,7 @@
   --danger: #f87171;
   --max: 1020px;
   --mono: 'Space Mono', monospace;
-  --sans: 'Syne', sans-serif;
+  --sans: 'DM Sans', sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -145,9 +145,9 @@ h1 {
   font-family: var(--sans);
   font-size: clamp(36px, 6vw, 56px);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 16px;
-  letter-spacing: -1px;
+  letter-spacing: -0.3px;
 }
 
 h2 {
@@ -599,6 +599,65 @@ textarea { resize: vertical; }
 }
 
 .footer-accent { color: var(--accent); }
+
+/* ─── HERO PHOTO LAYOUT ─────────────────────────────── */
+.hero-inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.hero-text { flex: 1; min-width: 260px; }
+.hero-photo-wrap {
+  flex-shrink: 0;
+  position: relative;
+  width: 160px;
+  height: 160px;
+  align-self: flex-end;
+}
+.hero-photo {
+  width: 160px; height: 160px;
+  border-radius: 18px;
+  object-fit: cover;
+  border: 2px solid rgba(74,240,176,.25);
+  display: block;
+}
+.hero-photo-placeholder {
+  width: 160px; height: 160px;
+  border-radius: 18px;
+  border: 2px dashed rgba(74,240,176,.3);
+  background: var(--surface2);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 8px;
+  color: var(--muted);
+  font-family: var(--mono); font-size: 11px;
+  text-align: center;
+}
+.hero-photo-placeholder .icon { font-size: 28px; opacity: .5; }
+.hero-photo-glow {
+  position: absolute; inset: -8px;
+  border-radius: 24px;
+  background: radial-gradient(circle, rgba(74,240,176,.1) 0%, transparent 70%);
+  pointer-events: none; z-index: -1;
+}
+
+/* ─── LINKEDIN BADGE ────────────────────────────────── */
+.linkedin-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 6px 14px; border-radius: 999px;
+  border: 1px solid rgba(10,102,194,.4);
+  background: rgba(10,102,194,.1);
+  color: #6ab4f5;
+  font-family: var(--mono); font-size: 12px;
+  transition: all .2s; margin-top: 6px;
+}
+.linkedin-badge:hover {
+  background: rgba(10,102,194,.2);
+  border-color: rgba(10,102,194,.6);
+  text-decoration: none; color: #90caff;
+}
 
 /* ─── FADE IN ────────────────────────────────────────── */
 .fade-in {
