@@ -16,17 +16,6 @@ Personal portfolio site for Jeffrey Kue, built with HTML, CSS, and vanilla JavaS
 - `UI Product Development Intern Resume - Jeffrey Kue.pdf` - downloadable resume
 - `JobDocumentation.pdf` - Gmail Job Tracker project documentation
 
-## Run Locally
-
-Open this folder in VS Code:
-
-`C:\Users\jeffr\Visual Studio Projects\mywebsite\kuejeffrey.github.io`
-
-Then either:
-
-- open `index.html` directly in your browser, or
-- use the VS Code `Live Server` extension for auto-refresh while editing
-
 ## Editing Notes
 
 - Update project cards in `projects.html`
