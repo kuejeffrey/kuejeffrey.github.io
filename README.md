@@ -1,6 +1,7 @@
 # Jeffrey Kue Portfolio
-
 Personal portfolio site for Jeffrey Kue, built with HTML, CSS, and vanilla JavaScript.
+
+Site link: kuejeffrey.github.io 
 
 ## Pages
 
