@@ -1,0 +1,39 @@
+# Jeffrey Kue Portfolio
+
+Personal portfolio site for Jeffrey Kue, built with HTML, CSS, and vanilla JavaScript.
+
+## Pages
+
+- `index.html` - home page
+- `about.html` - background, skills, and timeline
+- `projects.html` - featured projects and supporting links
+- `contact.html` - contact details and email form
+
+## Files
+
+- `style.css` - site styling
+- `theme.js` - light/dark theme toggle logic
+- `UI Product Development Intern Resume - Jeffrey Kue.pdf` - downloadable resume
+- `JobDocumentation.pdf` - Gmail Job Tracker project documentation
+
+## Run Locally
+
+Open this folder in VS Code:
+
+`C:\Users\jeffr\Visual Studio Projects\mywebsite\kuejeffrey.github.io`
+
+Then either:
+
+- open `index.html` directly in your browser, or
+- use the VS Code `Live Server` extension for auto-refresh while editing
+
+## Editing Notes
+
+- Update project cards in `projects.html`
+- Update bio, timeline, and resume link in `about.html`
+- Update homepage content in `index.html`
+- Update colors, spacing, and layout in `style.css`
+
+## Deployment
+
+This repo is structured like a static site and can be hosted with GitHub Pages.
