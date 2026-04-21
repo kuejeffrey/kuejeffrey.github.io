@@ -69,56 +69,36 @@
           <h4>Technical</h4>
           <div class="skill-row">
             <span class="skill-name">Python</span>
-            <div class="skill-bar-wrap"><div class="skill-bar" data-pct="0.72"></div></div>
-            <span class="skill-pct">72%</span>
           </div>
           <div class="skill-row">
             <span class="skill-name">SQL</span>
-            <div class="skill-bar-wrap"><div class="skill-bar" data-pct="0.68"></div></div>
-            <span class="skill-pct">68%</span>
           </div>
           <div class="skill-row">
             <span class="skill-name">Git / GitHub</span>
-            <div class="skill-bar-wrap"><div class="skill-bar" data-pct="0.75"></div></div>
-            <span class="skill-pct">75%</span>
           </div>
           <div class="skill-row">
             <span class="skill-name">Networking</span>
-            <div class="skill-bar-wrap"><div class="skill-bar" data-pct="0.60"></div></div>
-            <span class="skill-pct">60%</span>
           </div>
           <div class="skill-row">
             <span class="skill-name">Security Basics</span>
-            <div class="skill-bar-wrap"><div class="skill-bar" data-pct="0.55"></div></div>
-            <span class="skill-pct">55%</span>
           </div>
         </div>
         <div class="skill-group">
           <h4>Product / Leadership</h4>
           <div class="skill-row">
             <span class="skill-name">Product Ownership</span>
-            <div class="skill-bar-wrap"><div class="skill-bar" data-pct="0.80"></div></div>
-            <span class="skill-pct">80%</span>
           </div>
           <div class="skill-row">
             <span class="skill-name">Agile / Scrum</span>
-            <div class="skill-bar-wrap"><div class="skill-bar" data-pct="0.82"></div></div>
-            <span class="skill-pct">82%</span>
           </div>
           <div class="skill-row">
             <span class="skill-name">Stakeholder Mgmt</span>
-            <div class="skill-bar-wrap"><div class="skill-bar" data-pct="0.78"></div></div>
-            <span class="skill-pct">78%</span>
           </div>
           <div class="skill-row">
             <span class="skill-name">Communication</span>
-            <div class="skill-bar-wrap"><div class="skill-bar" data-pct="0.88"></div></div>
-            <span class="skill-pct">88%</span>
           </div>
           <div class="skill-row">
             <span class="skill-name">Team Leadership</span>
-            <div class="skill-bar-wrap"><div class="skill-bar" data-pct="0.85"></div></div>
-            <span class="skill-pct">85%</span>
           </div>
         </div>
       </div>
@@ -220,7 +200,7 @@
 
     <footer class="footer">
       <span>&copy; <span id="year"></span> <span class="footer-accent">Jeffrey Franklin Kue</span></span>
-      <span style="font-size:11px;">Built from scratch � UMD CS</span>
+      <span style="font-size:11px;">Built from scratch - UMD CS</span>
     </footer>
   </div>
 
@@ -230,10 +210,6 @@
       els.forEach((e) => {
         if (e.isIntersecting) {
           e.target.classList.add("visible");
-          e.target.querySelectorAll(".skill-bar").forEach((bar) => {
-            bar.style.width = (parseFloat(bar.dataset.pct) * 100) + "%";
-            setTimeout(() => bar.classList.add("animated"), 50);
-          });
         }
       });
     }, { threshold: 0.1 });
@@ -241,4 +217,3 @@
   </script>
 </body>
 </html>
-
